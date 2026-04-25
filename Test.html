@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Billing System</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      height: 100vh;
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      margin: 5px 0;
+      border-radius: 5px;
+    }
+
+    .sidebar a:hover {
+      background: #34495e;
+    }
+
+    /* Main Content */
+    .main {
+      flex: 1;
+      padding: 20px;
+      background: #ecf0f1;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    input, select, button {
+      padding: 8px;
+      margin: 5px 0;
+      width: 100%;
+    }
+
+    button {
+      background: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #2980b9;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Billing App</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">Company</a>
+    <a href="#">Customer</a>
+    <a href="#">Items</a>
+    <a href="#">Invoice</a>
+    <a href="#">Reports</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+
+    <!-- Dashboard -->
+    <div class="card">
+      <h3>Dashboard</h3>
+      <p>Welcome to Billing System</p>
+    </div>
+
+    <!-- Add Customer -->
+    <div class="card">
+      <h3>Add Customer</h3>
+      <input type="text" placeholder="Full Name" />
+      <input type="text" placeholder="Mobile Number" />
+      <input type="email" placeholder="Email" />
+      <input type="text" placeholder="City" />
+      <button>Add Customer</button>
+    </div>
+
+    <!-- Add Item -->
+    <div class="card">
+      <h3>Add Item</h3>
+      <input type="text" placeholder="Product Name" />
+      <input type="text" placeholder="SKU" />
+      <input type="number" placeholder="Price" />
+      <input type="number" placeholder="GST %" />
+      <button>Add Item</button>
+    </div>
+
+    <!-- Create Invoice -->
+    <div class="card">
+      <h3>Create Invoice</h3>
+      <input type="text" placeholder="Invoice Number" />
+      <input type="text" placeholder="Customer ID" />
+      <input type="number" placeholder="Amount" />
+      <select>
+        <option>Cash</option>
+        <option>UPI</option>
+        <option>Card</option>
+      </select>
+      <button>Generate Invoice</button>
+    </div>
+
+  </div>
+
+</body>
+</html>
